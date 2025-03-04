@@ -6,16 +6,23 @@ function App() {
 
   const [count, setCount] = useState(10)
 
+  // interview question if i want to increment the value of count by 3 in a single click
+  // const Increment = () => {
+  //  setCount(prevCount => prevCount + 1);
+  //  setCount(prevCount => prevCount + 1);
+  //  setCount(prevCount => prevCount + 1);
+  // }            
+
   const Increment = () => {
-    if(count >= 25){
+    if (count >= 25) {
       alert("Counter value can't be greater than 25");
       return
     }
     setCount(count + 1);
   }
 
-  const Decrement = () =>{
-    if(count <= 0){
+  const Decrement = () => {
+    if (count <= 0) {
       alert("Counter value can't be negative");
       return;
     }
