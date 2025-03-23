@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Copy, Check } from "lucide-react"; // Icons for copy button
+import { FaReact } from "react-icons/fa";
+
 import versionControlImage from "../../assets/undraw_version-control_e4yu.svg";
 
 const Home = () => {
@@ -39,23 +41,33 @@ export default App;`,
     ];
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
+        <div className="min-h-screen bg-[#DCDCE4] text-gray-900">
             {/* Hero Section */}
             <section className="flex flex-col items-center justify-center text-center py-16 px-4">
-                <h1 className="text-4xl sm:text-6xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
-                    Master React Router DOM 🚀
+
+                <h1 className="text-4xl sm:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-orange-700 to-gray-700">
+                    Hi, I'm <span className="">Sadique!</span> <br />
+                    <span className="inline-flex items-center gap-2">
+                        Welcome to My 
+                        {/* <span className="relative flex items-center text-blue-500"> */}
+                            {/* React */}
+                            <FaReact className="text-[#61DAFB] text-6xl sm:text-7xl ml-2 mx-4 animate-[spin_8s_linear_infinite]" />
+                        {/* </span> */}
+                        Journey.
+                    </span>
                 </h1>
-                <p className="mt-4 text-lg text-gray-300 max-w-2xl">
-                    Learn how to navigate seamlessly between pages in your React app using React Router DOM.
+
+                <p className="mt-4 text-lg text-gray-900 max-w-2xl">
+                    I'm a MERN stack enthusiast, passionate about React & web development.
                 </p>
 
                 {/* Call to Action */}
                 <Link
                     to="https://reactrouter.com/"
                     target="_blank"
-                    className="mt-6 inline-flex items-center bg-blue-600 hover:bg-blue-700 transition px-6 py-3 text-lg font-medium rounded-lg shadow-lg"
+                    className="mt-6 inline-flex items-center  bg-gray-400 transition px-6 py-3 text-lg text-white font-extrabold rounded-lg shadow-lg"
                 >
-                    🌍 Visit Official Docs
+                    Follow my journey & start yours today!
                 </Link>
 
                 {/* Hero Image */}
@@ -67,11 +79,11 @@ export default App;`,
             {/* Code Snippets Section */}
             <section className="py-16 px-4">
                 <h2 className="text-3xl sm:text-4xl font-bold text-center text-blue-400">Quick Start Guide ⚡</h2>
-                <div className="mt-8 grid gap-6 max-w-3xl mx-auto">
+                <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
                     {codeSnippets.map((snippet, index) => (
                         <div key={index} className="relative bg-gray-800 rounded-lg shadow-lg p-4">
                             <h3 className="text-lg font-semibold text-gray-300">{snippet.title}</h3>
-                            <pre className="mt-2 bg-gray-900 p-3 rounded-lg text-sm overflow-x-auto">
+                            <pre className="mt-2 bg-gray-900 p-3 rounded-lg text-sm text-white overflow-x-auto">
                                 {snippet.code}
                             </pre>
                             {/* Copy Button */}
@@ -86,7 +98,7 @@ export default App;`,
                 </div>
             </section>
 
-          
+
         </div>
     );
 };

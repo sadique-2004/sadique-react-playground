@@ -16,7 +16,7 @@ function GitHub() {
     return (
         
   
-        <div className="flex flex-col items-center bg-gray-900 text-white p-6 rounded-lg shadow-lg border border-gray-800 max-w-sm mx-auto my-4">
+        <div className="flex flex-col items-center bg-gray-900 text-white p-6 rounded-lg shadow-lg border border-gray-800 max-w-sm mx-4 my-4">
         {/* Profile Image */}
         <img
           src={data?.avatar_url}
