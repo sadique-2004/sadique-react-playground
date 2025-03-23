@@ -1,4 +1,5 @@
 import { useState, useCallback, useEffect, useRef } from 'react'
+import RandomPassApi from './components/RandomPassApi';
 
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
 
 
   return (
+    <>
     <div className="w-full min-h-screen flex items-center justify-center bg-cover bg-center">
       <div className="w-full max-w-md  shadow-lg rounded-xl px-6 py-6 my-10 bg-gray-800 text-white m-auto" >
 
@@ -102,9 +104,9 @@ function App() {
           </a>
         </div>
       </div>
-
-
     </div>
+    <RandomPassApi />
+    </>
   )
 }
 
